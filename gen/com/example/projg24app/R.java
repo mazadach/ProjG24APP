@@ -9,12 +9,18 @@ package com.example.projg24app;
 
 public final class R {
     public static final class anim {
-        public static final int abc_fade_in=0x7f040000;
-        public static final int abc_fade_out=0x7f040001;
-        public static final int abc_slide_in_bottom=0x7f040002;
-        public static final int abc_slide_in_top=0x7f040003;
-        public static final int abc_slide_out_bottom=0x7f040004;
-        public static final int abc_slide_out_top=0x7f040005;
+        public static final int a1=0x7f040000;
+        public static final int a2=0x7f040001;
+        public static final int abc_fade_in=0x7f040002;
+        public static final int abc_fade_out=0x7f040003;
+        public static final int abc_slide_in_bottom=0x7f040004;
+        public static final int abc_slide_in_top=0x7f040005;
+        public static final int abc_slide_out_bottom=0x7f040006;
+        public static final int abc_slide_out_top=0x7f040007;
+        public static final int rotate=0x7f040008;
+        public static final int scale=0x7f040009;
+        public static final int translate=0x7f04000a;
+        public static final int welcome_alpha=0x7f04000b;
     }
     public static final class attr {
         /**  Custom divider drawable to use for elements in the action bar. 
@@ -1091,10 +1097,11 @@ containing a value of this type.
         public static final int action_menu_divider=0x7f050016;
         public static final int action_menu_presenter=0x7f050017;
         public static final int action_mode_close_button=0x7f050024;
-        public static final int action_settings=0x7f05003c;
+        public static final int action_settings=0x7f05003e;
         public static final int activity_chooser_view_content=0x7f050025;
         public static final int always=0x7f05000b;
         public static final int beginning=0x7f050011;
+        public static final int btn_main_login=0x7f05003c;
         public static final int checkbox=0x7f05002d;
         public static final int collapseActionView=0x7f05000d;
         public static final int default_activity_button=0x7f050028;
@@ -1140,6 +1147,7 @@ containing a value of this type.
         public static final int top_action_bar=0x7f050020;
         public static final int up=0x7f050021;
         public static final int useLogo=0x7f050003;
+        public static final int welcome_image_view=0x7f05003d;
         public static final int withText=0x7f05000c;
     }
     public static final class integer {
@@ -1192,8 +1200,9 @@ containing a value of this type.
         public static final int abc_search_dropdown_item_icons_2line=0x7f030015;
         public static final int abc_search_view=0x7f030016;
         public static final int abc_simple_decor=0x7f030017;
-        public static final int activity_main=0x7f030018;
-        public static final int support_simple_spinner_dropdown_item=0x7f030019;
+        public static final int activity_login=0x7f030018;
+        public static final int activity_main_welcome=0x7f030019;
+        public static final int support_simple_spinner_dropdown_item=0x7f03001a;
     }
     public static final class menu {
         public static final int main=0x7f0c0000;

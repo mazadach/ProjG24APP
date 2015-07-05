@@ -8,12 +8,12 @@ package android.support.v7.appcompat;
 
 public final class R {
 	public static final class anim {
-		public static final int abc_fade_in = 0x7f040000;
-		public static final int abc_fade_out = 0x7f040001;
-		public static final int abc_slide_in_bottom = 0x7f040002;
-		public static final int abc_slide_in_top = 0x7f040003;
-		public static final int abc_slide_out_bottom = 0x7f040004;
-		public static final int abc_slide_out_top = 0x7f040005;
+		public static final int abc_fade_in = 0x7f040002;
+		public static final int abc_fade_out = 0x7f040003;
+		public static final int abc_slide_in_bottom = 0x7f040004;
+		public static final int abc_slide_in_top = 0x7f040005;
+		public static final int abc_slide_out_bottom = 0x7f040006;
+		public static final int abc_slide_out_top = 0x7f040007;
 	}
 	public static final class attr {
 		public static final int actionBarDivider = 0x7f01000f;
@@ -343,7 +343,7 @@ public final class R {
 		public static final int abc_search_dropdown_item_icons_2line = 0x7f030015;
 		public static final int abc_search_view = 0x7f030016;
 		public static final int abc_simple_decor = 0x7f030017;
-		public static final int support_simple_spinner_dropdown_item = 0x7f030019;
+		public static final int support_simple_spinner_dropdown_item = 0x7f03001a;
 	}
 	public static final class string {
 		public static final int abc_action_bar_home_description = 0x7f0a0001;
