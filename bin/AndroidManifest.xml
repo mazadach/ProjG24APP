@@ -22,8 +22,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.projg24app.LoginActivity"/>
-        <activity android:name="com.example.projg24app.ContentActivity"/>
+        <activity android:name="com.example.projg24app.LoginActivity" android:screenOrientation="portrait" />
+        <activity android:name="com.example.projg24app.ContentActivity" android:screenOrientation="portrait" />
+        <activity android:name="com.example.projg24app.MyProfileActivity" android:screenOrientation="portrait" />
+        <activity android:name="com.example.projg24app.TheNewsActivity" android:screenOrientation="portrait" />
+        <activity android:name="com.example.projg24app.SearchExhibitionActivity" android:screenOrientation="portrait" />
+        <activity android:name="com.example.projg24app.NearInspectActivity" android:screenOrientation="portrait" />
+        <activity android:name="com.example.projg24app.MyFavoriteActivity" android:screenOrientation="portrait" />
         
     </application>
 
