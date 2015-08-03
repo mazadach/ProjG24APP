@@ -23,7 +23,7 @@ public class LoginActivity extends Activity {
 	}
 
 	private void findView() {
-		btnLogin = (Button) findViewById(R.id.btn_main_login);
+		btnLogin = (Button) findViewById(R.id.btn_login_log_in);
 
 	}
 

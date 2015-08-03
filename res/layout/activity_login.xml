@@ -2,54 +2,56 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical" >
-
-    
     <TextView
-        android:layout_width="wrap_content"
+        android:textSize="30sp"
+        android:gravity="center_horizontal"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="ProjG24APP" />
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal" >
-
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="帳號" />
-
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="" />
     </LinearLayout>
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal" >
-
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="密碼" />
-
         <EditText
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-             />
+            android:layout_height="wrap_content" />
     </LinearLayout>
-
-    <Button
-        android:id="@+id/btn_main_login"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+        <Button
+            android:id="@+id/btn_login_sign_up"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="SignUp" />
+        <Button
+            android:id="@+id/btn_login_log_in"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="LogIn" />
+    </LinearLayout>
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="登入" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="申請加入" />
-
+        android:text="忘記密碼?" />
 </LinearLayout>
