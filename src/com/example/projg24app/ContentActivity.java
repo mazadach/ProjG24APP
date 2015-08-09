@@ -4,8 +4,8 @@ import java.util.ArrayList;
 
 import com.example.projg24app.content.slidedrawer.SlideDrawerAdapter;
 import com.example.projg24app.content.slidedrawer.SlideDrawerContentLeftListFragment;
-import com.example.projg24app.content.slidedrawer.SlideDrawerContentMainFragment;
 import com.example.projg24app.content.slidedrawer.SlideDrawerModel;
+import com.example.projg24app.fragment.TestFragment;
 
 import android.app.Activity;
 import android.app.FragmentManager;
@@ -13,14 +13,10 @@ import android.app.FragmentTransaction;
 import android.os.Bundle;
 import android.support.v4.app.ActionBarDrawerToggle;
 import android.support.v4.widget.DrawerLayout;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.Button;
-import android.widget.ListView;
-import android.widget.AdapterView.OnItemClickListener;
+import android.app.Fragment;
 
 public class ContentActivity extends Activity {
 
@@ -31,7 +27,9 @@ public class ContentActivity extends Activity {
 	private DrawerLayout drawerLayout;
 	private ArrayList<SlideDrawerModel> arrayList;
 	private SlideDrawerAdapter leftListadapter;
+	 FragmentManager fragmentManager = getFragmentManager();
 	SlideDrawerContentLeftListFragment rFragment;
+	Fragment testFragment;
 
 	public static final String 
 					MY_PROFILE = "個人檔案", 
@@ -47,15 +45,21 @@ public class ContentActivity extends Activity {
 		setContentView(R.layout.activity_content);
 		
 		 rFragment = new SlideDrawerContentLeftListFragment();
-		 FragmentManager fragmentManager = getFragmentManager();
+		
 		 FragmentTransaction ft = fragmentManager.beginTransaction();
 		 ft.replace(R.id.drawer_list, rFragment);
 		 ft.commit();
+		 
+		  testFragment = new TestFragment();
+		 
+		 FragmentTransaction testft = fragmentManager.beginTransaction();
+		 testft.replace(R.id.content_frame, testFragment);
+		 testft.commit();
 		
 		
 		findView();
 		setView();
-		setAction();
+		
 	}
 
 	private void findView() {
@@ -89,10 +93,28 @@ public class ContentActivity extends Activity {
 		getActionBar().setDisplayHomeAsUpEnabled(true);
 	}
 
+	  public void switchContent(Fragment from, Fragment to) {
+	        if (testFragment != to) {
+	        	testFragment = to;
+	            FragmentTransaction transaction = fragmentManager.beginTransaction();
+	            if (!to.isAdded()) {    // 先判断是否被add过
+	                transaction.hide(from).add(R.id.content_frame, to).commit(); // 隐藏当前的fragment，add下一个到Activity中
+	            } else {
+	                transaction.hide(from).show(to).commit(); // 隐藏当前的fragment，显示下一个
+	            }
+	        }
+	    }
 
-	private void setAction() {
+	  public void switchContent(Fragment fragment) {
+	        if(testFragment != fragment) {
+	        	FragmentTransaction ft = fragmentManager.beginTransaction();  
+	        	testFragment = fragment;
+		        ft.replace(R.id.content_frame, testFragment);  
+		        ft.addToBackStack(null);  
+		        ft.commit();  
+	        }
+	    }
 
-	}
 
 	@Override
 	protected void onPostCreate(Bundle savedInstanceState) {
